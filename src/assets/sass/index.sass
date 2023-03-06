@@ -1,0 +1,66 @@
+$bg : #F4F5FC
+$purple: #5A61ED
+
+html
+	box-sizing: border-box
+	
+*, *:before, *:after
+	box-sizing: inherit
+
+
+// @font-face
+// 	font-family: 'WorkSans'
+// 	font-style: normal
+// 	font-weight: 400
+// 	src: local('WorkSans'), local('WorkSans-Regular'), url('../../assets/fonts/WorkSans-Regular.ttf') format('ttf')
+// 	font-display: block
+
+body
+	margin: 0
+	padding: 0
+	background-color: $bg
+	font-family: 'Work Sans', 'sans-serif'
+	color: #111
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+
+section.container
+	margin: 60px auto 
+	width: 665px
+	height: 481px
+	background-color: #fff
+	display: flex
+	border-top: 1px solid #EAEBF2
+	border-bottom: 1px solid #EAEBF2
+	.left
+		background-color: $purple
+		color: #fff
+		font-size: 49px
+		font-family: 'PT Sans'
+		//writing-mode: vertical-tb-rl
+		width: 137px
+		height: 100%
+		position: relative
+		span
+			position: absolute
+			bottom: 59px
+			right: -39px
+			transform: rotate(-90deg)
+			white-space: nowrap
+	.right
+		background: #fff
+		flex-grow: 1
+		padding: 39px 22px 22px 21px
+		height: 100%
+		h1
+			font-size: 22px
+			font-weight: 500
+			margin-bottom: 5px
+			margin-top: 0
+		h3
+			font-size: 14px
+			font-weight: 300
+			margin-top: 0
+				
