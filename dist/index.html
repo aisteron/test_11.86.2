@@ -8,34 +8,115 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script defer src="main.js"></script></head>
+</head>
 <body>
   <section class="container">
     <div class="left">
       <span>Sign up</span>
     </div>
-    <div class="right">
+    <div class="right"  style="background-image: url(./img/50.svg);">
       <h1>New user?</h1>
       <h3>Use the form below to create your account.</h3>
       <div class="fields">
         <div class="l">
-          <div class="group">
+
+          <label class="group name">
+            <input type="text" id="name" required>
             <span>First Name</span>
-            <input type="text" id="name">
-          </div>
-          <div class="group">
-            <span>First Name</span>
+          </label>
+          
+          <label class="group nat">
+            <div class="row">
+              <label></label>
+              <span>Nationality</span>
+              <img src="./img/chevron.svg" class="chevron">
+            </div>
             <div class="dropdown">
               <ul>
                 <li>American</li>
                 <li>Russian</li>
                 <li>Belorussian</li>
               </ul>
-              <img src="/assets/img/chevron.svg" class="chevron">
             </div>
-          </div>
+          </label>
+          
+          <label class="group date">
+            <span>Date of Birth</span>
+
+            <div class="f">
+              <div class="dropdown day">
+                <label>
+                  <span>Day</span>
+                  <img src="./img/chevron.svg"/>
+                </label>
+                <ul>
+                  <li>21</li>
+                  <li>20</li>
+                  <li>19</li>
+                </ul>
+              </div>
+              
+              <div class="dropdown month">
+                <label>
+                  <span>Month</span>
+                  <img src="./img/chevron.svg"/>
+                </label>
+                
+                <ul>
+                  <li>December</li>
+                  <li>January</li>
+                  <li>February</li>
+                </ul>
+              </div>
+              
+              <div class="dropdown year">
+                <label>
+                  <span>Year</span>
+                  <img src="./img/chevron.svg"/>
+                </label>
+                <ul>
+                  <li>1995</li>
+                  <li>1996</li>
+                  <li>1997</li>
+                </ul>
+              </div>
+            </div>
+
+            
+          </label>
+
+          <label class="group pswd">
+            <input type="password" id="pswd" required>
+            <span>Password</span>
+          </label>
+
+      
         </div>
-      </div>
+        <div class="r">
+          <label class="group name">
+            <input type="text" id="surname" required>
+            <span>Last Name</span>
+          </label>
+          <label class="group email">
+            <input type="text" id="email" required>
+            <span>E-mail</span>
+            <i></i>
+          </label>
+          <label class="group gender">
+            <span>Gender</span>
+            <label for="male">
+              <input type="radio" name="gender" id="male">
+              <span>Male</span>
+            </label>
+            
+          
+            <label for="female">
+              <input type="radio" name="gender" id="female" checked>
+              <span>Female</span>
+            </label>
+            
+          </label>
+        </div>
       <div class="footer">
         <p>Have an account? <a href="#">Login</a></p>
         <button class="submit">Complete Signup</button>

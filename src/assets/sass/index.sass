@@ -8,13 +8,6 @@ html
 	box-sizing: inherit
 
 
-// @font-face
-// 	font-family: 'WorkSans'
-// 	font-style: normal
-// 	font-weight: 400
-// 	src: local('WorkSans'), local('WorkSans-Regular'), url('../../assets/fonts/WorkSans-Regular.ttf') format('ttf')
-// 	font-display: block
-
 body
 	margin: 0
 	padding: 0
@@ -34,6 +27,7 @@ section.container
 	display: flex
 	border-top: 1px solid #EAEBF2
 	border-bottom: 1px solid #EAEBF2
+	
 	.left
 		background-color: $purple
 		color: #fff
@@ -54,6 +48,9 @@ section.container
 		flex-grow: 1
 		padding: 39px 22px 22px 21px
 		height: 100%
+		background-position: bottom right
+		background-repeat: no-repeat
+		position: relative
 		h1
 			font-size: 22px
 			font-weight: 500
@@ -63,4 +60,177 @@ section.container
 			font-size: 14px
 			font-weight: 300
 			margin-top: 0
+			margin-bottom: 27px
+
+		.fields
+			display: flex
+			.r
+				margin-left: 1rem
+			label.group
+				position: relative
+				width: 235px
+				display: block
+				margin-bottom: 1rem
+				&.name, &.pswd, &.email
+					span
+						position: absolute
+						top: 0
+						left: 0
+						transition: all 0.3s ease-in-out
+						font-weight: 300
+					input[type="text"], input[type="password"]
+						border: none
+						border-bottom: 1px solid #F2F2F2
+						width: 100%
+						font-family: inherit
+						font-size: 14px
+						padding-bottom: 3px
+						font-weight: 400
+						padding-left: 0
+						&:focus
+							outline: none
+						&:focus ~ span, &:valid ~ span
+							top: -16px	!important
+							font-size: 12px
+							color: #7C7C7C
+					
+				&.nat
+					border-bottom: 1px solid #F2F2F2
+					height: 42px
+					cursor: pointer
+					.row
+						display: flex
+						justify-content: space-between
+						position: relative
+						top: 20px
+						> *
+							pointer-events: none
+						span
+							font-weight: 300
+							transition: all 0.3s ease-in-out
+						label
+							display: none	
+
+					&.open
+						border-bottom: none
+						.dropdown
+							display: block
+						.row
+							img.chevron
+								transform: rotate(-180deg)
+					&.selected
+						.row
+							label
+								display: block
+							span
+								position: absolute
+								top: -18px
+								font-size: 12px
+								color: #7C7C7C					
+
+					.dropdown
+						display: none
+						background-color: #fff
+						position: absolute
+						box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+						width: 100%
+						top: 48px
+						z-index: 2
+						ul
+							li
+								line-height: 180%
+								padding: 4px
+								padding-left: 10px
+								&:hover
+									background-color: $purple
+									color: #fff
+
+				&.date
+					margin-bottom: 1.4rem
+					>span
+						font-size: 12px
+						color: #7C7C7C
+						display: block
+						margin-bottom: 6px
+						font-weight: 300
+					.f
+						display: flex
+						justify-content: space-between
+						.dropdown
+							position: relative
+							ul
+								background-color: #fff
+								box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+								position: absolute
+								z-index: 2
+								li
+									padding: 4px
+									line-height: 100%
+									padding-left: 10px
+									cursor: pointer
+									&:hover
+										background-color: $purple
+										color: #fff
+
+							&.open
+								ul
+									display: block
+								label img
+									transform: rotate(-180deg)	
+
+							ul
+								display: none
+							label
+								display: flex
+								align-items: center
+								cursor: pointer
+								img
+									margin-left: 10px
+									transition: all 0.3s ease-in-out	
+
+							&.month
+								label
+									span
+										text-transform: capitalize
+								ul
+									li
+										text-transform: capitalize
+				&.email
+					margin-top: 36px
+					i
+						position: absolute
+						left: 0
+						bottom: -18px
+						font-size: 11px
+						color: red
+					&.error
+						input
+							color: red
+							border-color: red	
+			.footer
+				position: absolute
+				bottom: 33px
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 92%
+				a
+					color: $purple
+					&:hover
+						text-decoration: none
+				button
+					height: 32px
+					background-color: $purple
+					color: #fff
+					font-size: 14px
+					border: none
+					font-family: 'PT Sans'
+					padding: 7px 25px
+					cursor: pointer
+					transition: all 0.3s ease
+					&:hover
+						background-color: darken($purple, 5%)
+					&:focus
+						outline: none
+
 				
