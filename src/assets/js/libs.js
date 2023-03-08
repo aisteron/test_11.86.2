@@ -100,10 +100,12 @@ export async function load_toast(){
 
 	return new Promise(resolve => {
 		let script = document.createElement('script')
-		script.src = '/vendors/snackbar/snackbarlight.min.js'
+    let path = ''
+    window.location.host == 'ashaev.by' && (path = '/test/')
+		script.src = `${path}/vendors/snackbar/snackbarlight.min.js`
 		qs('body').appendChild(script)
 		script.onload = () => {
-			let style = loadCSS('/vendors/snackbar/snackbarlight.min.css')
+			let style = loadCSS(`${path}/vendors/snackbar/snackbarlight.min.css`)
 			onloadCSS(style, () => {
 				resolve('toast assets loaded')
 			})

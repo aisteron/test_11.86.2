@@ -177,8 +177,9 @@ function submit(){
       },
       password: qs('#pswd').value
     }
-
-    fetch("/server-ok",{
+    let path = '/server-ok'
+    window.location.host == 'ashaev.by' && (path = '/test/server-ok.json')
+    fetch(path,{
       method: "POST",
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(obj)
@@ -284,7 +285,7 @@ async function processArray(array) {
   for (const item of array) {
     await delayedLog(item);
   }
-  console.log('Done!');
+  //console.log('Done!');
 }
 processArray(arr);
 }
