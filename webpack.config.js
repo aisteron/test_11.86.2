@@ -9,13 +9,25 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  //devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
     port: 9000,
+    
+    onBeforeSetupMiddleware: function (devServer) {
+      if (!devServer) {
+        throw new Error('webpack-dev-server is not defined');
+      }
+
+      devServer.app.post('/server-ok', function (req, res) {
+        res.json({ success: 'true' });
+      });
+    },
+    
+
   },
   module: {
     rules: [

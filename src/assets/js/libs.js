@@ -1,7 +1,7 @@
 //import "regenerator-runtime/runtime.js";
 
 export const cfg = {
-	host: "https://pvs.by"
+	host: "http://localhost"
 }
 export let doc=document,
     qsa=(s,o=doc)=>o.querySelectorAll(s),
@@ -101,7 +101,7 @@ export async function load_toast(){
 	return new Promise(resolve => {
 		let script = document.createElement('script')
 		script.src = '/vendors/snackbar/snackbarlight.min.js'
-		qs('.scripts-area').appendChild(script)
+		qs('body').appendChild(script)
 		script.onload = () => {
 			let style = loadCSS('/vendors/snackbar/snackbarlight.min.css')
 			onloadCSS(style, () => {

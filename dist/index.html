@@ -18,19 +18,29 @@
       <h1>New user?</h1>
       <h3>Use the form below to create your account.</h3>
       <div class="fields">
-        <div class="l">
-
-          <label class="group name">
-            <input type="text" id="name" required>
-            <span>First Name</span>
-          </label>
+        
+        <div class="row">
           
-          <label class="group nat">
-            <div class="row">
-              <label></label>
+          <div class="group name">
+            <input type="text" id="name" required value="Alice">
+            <span>First Name</span>
+          </div>
+          
+          <div class="group surname">
+            <input type="text" id="surname" required value="Miller">
+            <span>Last Name</span>
+          </div>
+
+        </div>
+
+        <div class="row">
+          
+          <div class="group nat selected">
+            <span class="row">
+              <i>American</i>
               <span>Nationality</span>
-              <img src="./img/chevron.svg" class="chevron">
-            </div>
+              <img src="./img/chevron.svg" class="chevron" alt="chevron">
+            </span>
             <div class="dropdown">
               <ul>
                 <li>American</li>
@@ -38,17 +48,27 @@
                 <li>Belorussian</li>
               </ul>
             </div>
-          </label>
+          </div>
           
-          <label class="group date">
+          <div class="group email">
+            <input type="text" id="email" required value="alice.miller@yahoo.com">
+            <span>E-mail</span>
+            <i></i>
+            <img src="./img/ok.svg" class="ok" alt="ok">
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="group date">
             <span>Date of Birth</span>
 
             <div class="f">
               <div class="dropdown day">
-                <label>
-                  <span>Day</span>
-                  <img src="./img/chevron.svg"/>
-                </label>
+                
+                <i>
+                  <span>21</span>
+                </i>
                 <ul>
                   <li>21</li>
                   <li>20</li>
@@ -57,10 +77,9 @@
               </div>
               
               <div class="dropdown month">
-                <label>
-                  <span>Month</span>
-                  <img src="./img/chevron.svg"/>
-                </label>
+                <i>
+                  <span>December</span>
+                </i>
                 
                 <ul>
                   <li>December</li>
@@ -70,10 +89,9 @@
               </div>
               
               <div class="dropdown year">
-                <label>
-                  <span>Year</span>
-                  <img src="./img/chevron.svg"/>
-                </label>
+                <i>
+                  <span>1995</span>
+                </i>
                 <ul>
                   <li>1995</li>
                   <li>1996</li>
@@ -83,45 +101,50 @@
             </div>
 
             
-          </label>
-
-          <label class="group pswd">
-            <input type="password" id="pswd" required>
-            <span>Password</span>
-          </label>
-
-      
-        </div>
-        <div class="r">
-          <label class="group name">
-            <input type="text" id="surname" required>
-            <span>Last Name</span>
-          </label>
-          <label class="group email">
-            <input type="text" id="email" required>
-            <span>E-mail</span>
-            <i></i>
-          </label>
-          <label class="group gender">
-            <span>Gender</span>
-            <label for="male">
-              <input type="radio" name="gender" id="male">
-              <span>Male</span>
-            </label>
-            
+          </div>
           
-            <label for="female">
-              <input type="radio" name="gender" id="female" checked>
-              <span>Female</span>
-            </label>
+          <div class="group gender">
+            <span>Gender</span>
+
+            <i class="radio">
+              
+              <label for="male">
+                <input type="radio" name="gender" id="male">
+                <span>Male</span>
+                <i class="checkmark"></i>
+              </label>
+              
+              <label for="female">
+                <input type="radio" name="gender" id="female" checked>
+                <span>Female</span>
+                <i class="checkmark"></i>
+              </label>
+            </i>
             
-          </label>
+          </div>
+
         </div>
+
+        <div class="row">
+
+          <div class="group pswd">
+            <input type="password" id="pswd" required value="123">
+            <span>Password</span>
+            <i></i>
+          </div>
+
+          <div class="group cpswd">
+            <input type="password" id="cpswd" required value="123">
+            <span>Confirm Password</span>
+          </div>
+
+        </div>
+
+      </div>
       <div class="footer">
         <p>Have an account? <a href="#">Login</a></p>
         <button class="submit">Complete Signup</button>
       </div>
-    </div>
   </section>
 </body>
 </html>
